@@ -18,6 +18,7 @@ This project uses a pipeline of specialized AI agents to:
 - ✅ **Hallucination Detection** - Ensures no fake skills or experience are added
 - 🚫 **AI Cliché Filter** - Detects and removes robotic AI-generated language
 - 🔄 **Automatic Retries** - Built-in retry logic for reliability
+- 🔁 **Self-Correcting Loop** - Writer automatically fixes issues based on auditor feedback (up to 3 attempts)
 
 ## Architecture
 
@@ -92,6 +93,23 @@ The auditor checks for:
 - **Critical Issues** - False claims that would disqualify the resume
 - **Minor Issues** - Style improvements
 
+### Feedback Loop
+
+If the audit fails, the system automatically:
+1. Extracts all issues and suggestions from the audit report
+2. Sends the feedback back to the writer agent
+3. Requests a corrected version with strict instructions to fix the issues
+4. Re-audits the new version
+5. Repeats up to 3 times until the CV passes or max attempts reached
+
+This ensures that common issues like:
+- Adding skills not in the original CV
+- Omitting important original skills
+- Missing job requirements
+- Using AI clichés
+
+...are automatically corrected without manual intervention.
+
 ## Example Workflow
 
 ```
@@ -102,10 +120,19 @@ The auditor checks for:
    ✅ Job Analyzed: Senior Backend Engineer at ClickHouse
    🎯 Keywords found: ['Python', 'Kubernetes', 'Docker', ...]
 
-🤖 Agent 2 (Writer): Tailoring CV...
+🤖 Agent 2 (Writer): Tailoring CV (Attempt 1/3)...
    ✅ CV Drafted. Summary: Experienced backend engineer...
 
 🤖 Agent 3 (Auditor): Validating for hallucinations and AI-speak...
+   ⚠️ Audit failed on attempt 1
+   🔄 Will retry with feedback...
+
+🤖 Agent 2 (Writer): Tailoring CV (Attempt 2/3)...
+   🔄 Retrying with audit feedback...
+   ✅ CV Drafted. Summary: Backend engineer with expertise...
+
+🤖 Agent 3 (Auditor): Validating for hallucinations and AI-speak...
+   ✅ Audit passed on attempt 2!
 
 ==============================
 📋 FINAL AUDIT REPORT
