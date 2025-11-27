@@ -8,7 +8,7 @@ from workflows import ResumeTailorWorkflow
 async def main():
     # --- Inputs ---
     # TODO: Pass the job URL as CLI argument.
-    job_url = "https://job-boards.greenhouse.io/clickhouse/jobs/5585335004"  # Example
+    job_url = "<JOB_URL_PLACEHOLDER>"
     resume_file_path = os.path.join(os.getcwd(), "resume.md")
     original_cv_text: str = ""
 
