@@ -1,5 +1,5 @@
 ### Emad Mokhtar  
-**Staff Software Engineer / Software Architect**  
+**Staff Software Engineer / Solution Architect**  
 `+31 (6) 4595 5236` | `me@emadmokhtar.com` | Rotterdam, The Netherlands  
 
 ---
@@ -32,21 +32,15 @@ Experienced Software Engineer and Architect seeking a Staff Engineer leadership 
 
 ### PROJECTS
 
-#### BuddyFit – AI-Powered Weightlifting Companion  
-*(Personal Project | 2024)*  
-
-- Developed an AI-driven conversational interface to assist users in building and maintaining consistent exercise routines.  
-- Engineered a system that fetches YouTube video transcripts, processes them into full-text formats, and imports the data into a TimeScaleDB database.  
-- Built a command-line interface (CLI) that utilizes the processed data to answer user queries about exercises, enhancing user engagement and knowledge.  
-- Integrated advanced AI technologies, including Retrieval-Augmented Generation (RAG), LangChain, LangGraph, and Ollama, to create a responsive and intelligent user experience.  
-- Demonstrated proficiency in combining software engineering principles with AI to deliver a practical and innovative solution.  
+[**BuddyFit**](https://github.com/EmadMokhtar/BuddyFit) -  an AI-powered, conversational interface designed to help users build and maintain a consistent exercise routine.
+[**Resume Tailorator**](https://github.com/EmadMokhtar/resume_tailorator) - A multi-agent AI system that automatically analyzes job postings and tailors your resume to match specific job requirements while maintaining accuracy and avoiding AI-generated clichés.
 
 ---
 
 ### WORK EXPERIENCE
 
 #### NN, Den Haag, Netherlands *(Hybrid)*  
-**Lead Software Engineer / Software Architect**  
+**Staff Software Engineer / Solution Architect**  
 *April 2024 — Present*  
 
 - Team Leadership & Technical Guidance: Mentored engineers throughout the full software development lifecycle, providing technical guidance, resolving challenges, and aligning projects with strategic goals.  
